@@ -32,7 +32,7 @@ public class Cryptarithmetic {
         System.out.println("Give puzzle: ");
         String s = scanner.nextLine();
         String[] temp = s.split(" ");
-        String[] temp2 = new String[3];
+//         String[] temp2 = new String[3];
 
         puzzleWords[0] = temp[0];
         puzzleWords[1] = temp[2];
@@ -58,6 +58,7 @@ public class Cryptarithmetic {
             int num3 = convertToDecimal(getNum(puzzleWords[2]));
             if (num1 + num2 == num3) {
                 if((puzzleWords[2].length()> puzzleWords[0].length() && puzzleWords[2].length()> puzzleWords[1].length())){
+                    //making sure that number has as many digits as letters the word given on puzzle has
                     if(Integer.toString(getNum(puzzleWords[2])).length() > Integer.toString(getNum(puzzleWords[0])).length()
                             && Integer.toString(getNum(puzzleWords[2])).length() > Integer.toString(getNum(puzzleWords[1])).length()){
 
